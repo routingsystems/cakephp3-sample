@@ -1,0 +1,15 @@
+{
+  "name": "CakePHP3.6 TEST",
+  "description": "Sample: pure CakePHP3.6.8 on Heroku with Heroku Postgres",
+  "env": {
+    "SECURITY_SALT": {
+      "description": "SALT",
+      "generator": "secret"
+    },
+    "debug": {
+      "description": "debug mode",
+      "value": "false"
+    }
+  },
+  "addons": [ "heroku-postgresql" ]
+}
