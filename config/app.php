@@ -146,16 +146,12 @@ return [
          * Duration will be set to '+2 seconds' in bootstrap.php when debug = true
          */
         '_cake_routes_' => [
-//            'className' => 'Cake\Cache\Engine\FileEngine',
-            'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
-            'server' => $cache['host'],
-            'port' => $cache['port'],
-            'password' => $cache['pass'],
+            'className' => 'Cake\Cache\Engine\FileEngine',
             'prefix' => 'myapp_cake_routes_',
             'path' => CACHE,
             'serialize' => true,
             'duration' => '+1 years',
-//            'url' => env('CACHE_CAKEROUTES_URL', null),
+            'url' => env('CACHE_CAKEROUTES_URL', null),
         ],
     ],
 
