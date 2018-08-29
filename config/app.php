@@ -98,7 +98,7 @@ return [
             'host' => $cache['host'],
             'port' => $cache['port'],
             'password' => $cache['pass'],
-//            'path' => CACHE,
+            'path' => CACHE,
 //            'url' => env('CACHE_DEFAULT_URL', null),
         ],
 
@@ -109,18 +109,16 @@ return [
          * If you set 'className' => 'Null' core cache will be disabled.
          */
         '_cake_core_' => [
-            /*
-            'className' => 'Cake\Cache\Engine\FileEngine',
+//            'className' => 'Cake\Cache\Engine\FileEngine',
+            'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
+            'host' => $cache['host'],
+            'port' => $cache['port'],
+            'password' => $cache['pass'],
             'prefix' => 'myapp_cake_core_',
             'path' => CACHE . 'persistent/',
             'serialize' => true,
             'duration' => '+1 years',
-            'url' => env('CACHE_CAKECORE_URL', null),
-            */
-            'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
-            'host' => $cache['host'],
-            'port' => $cache['port'],
-            'password' => $cache['pass'],            
+//            'url' => env('CACHE_CAKECORE_URL', null),      
         ],
 
         /**
@@ -130,18 +128,16 @@ return [
          * Duration will be set to '+2 minutes' in bootstrap.php when debug = true
          */
         '_cake_model_' => [
-            /*
-            'className' => 'Cake\Cache\Engine\FileEngine',
-            'prefix' => 'myapp_cake_model_',
-            'path' => CACHE . 'models/',
-            'serialize' => true,
-            'duration' => '+1 years',
-            'url' => env('CACHE_CAKEMODEL_URL', null),
-            */
+//            'className' => 'Cake\Cache\Engine\FileEngine',
             'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
             'host' => $cache['host'],
             'port' => $cache['port'],
             'password' => $cache['pass'],
+            'prefix' => 'myapp_cake_model_',
+            'path' => CACHE . 'models/',
+            'serialize' => true,
+            'duration' => '+1 years',
+//            'url' => env('CACHE_CAKEMODEL_URL', null),
         ],
 
         /**
@@ -150,18 +146,16 @@ return [
          * Duration will be set to '+2 seconds' in bootstrap.php when debug = true
          */
         '_cake_routes_' => [
+//            'className' => 'Cake\Cache\Engine\FileEngine',
             'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
             'host' => $cache['host'],
             'port' => $cache['port'],
             'password' => $cache['pass'],
-            /*
-            'className' => 'Cake\Cache\Engine\FileEngine',
             'prefix' => 'myapp_cake_routes_',
             'path' => CACHE,
             'serialize' => true,
             'duration' => '+1 years',
-            'url' => env('CACHE_CAKEROUTES_URL', null),
-            */
+//            'url' => env('CACHE_CAKEROUTES_URL', null),
         ],
     ],
 
