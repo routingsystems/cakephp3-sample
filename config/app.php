@@ -1,5 +1,9 @@
 <?php
+
+/* add using Heroku Postgres and Heroku Redis*/
 $db = parse_url(env('DATABASE_URL'));
+$cache = parse_url(env('REDIS_URL'));
+
 return [
     /**
      * Debug Level:
@@ -89,9 +93,13 @@ return [
      */
     'Cache' => [
         'default' => [
-            'className' => 'Cake\Cache\Engine\FileEngine',
-            'path' => CACHE,
-            'url' => env('CACHE_DEFAULT_URL', null),
+//            'className' => 'Cake\Cache\Engine\FileEngine',
+            'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
+            'host' => $cache['host'],
+            'port' => $cache['port'],
+            'password' => $db['pass'],
+//            'path' => CACHE,
+//            'url' => env('CACHE_DEFAULT_URL', null),
         ],
 
         /**
@@ -247,7 +255,7 @@ return [
         'default' => [
             'className' => 'Cake\Database\Connection',
             // 'driver' => 'Cake\Database\Driver\Mysql',
-            'driver' => 'Cake\Database\Driver\Postgres',
+            'driver' => 'Cake\Database\Driver\Postgres', // change using Heroku Postgres
             'persistent' => false,
             // 'host' => 'localhost',
             'host' => $db['host'],
