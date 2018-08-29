@@ -2,6 +2,7 @@
 
 /* add using Heroku Postgres and Heroku Redis*/
 $db = parse_url(env('DATABASE_URL'));
+$cache = parse_url(env('REDIS_URL'));
 
 return [
     /**
