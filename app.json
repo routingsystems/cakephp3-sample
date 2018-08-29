@@ -6,10 +6,12 @@
       "description": "SALT",
       "generator": "secret"
     },
-    "debug": {
+    "DEBUG": {
       "description": "debug mode",
       "value": "false"
     }
   },
-  "addons": [ "heroku-postgresql" ]
+  "addons": [
+    "heroku-postgresql"
+  ]
 }
