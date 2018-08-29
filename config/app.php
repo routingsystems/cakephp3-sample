@@ -97,7 +97,7 @@ return [
             'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
             'host' => $cache['host'],
             'port' => $cache['port'],
-            'password' => $db['pass'],
+            'password' => $cache['pass'],
 //            'path' => CACHE,
 //            'url' => env('CACHE_DEFAULT_URL', null),
         ],
@@ -120,7 +120,7 @@ return [
             'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
             'host' => $cache['host'],
             'port' => $cache['port'],
-            'password' => $db['pass'],            
+            'password' => $cache['pass'],            
         ],
 
         /**
@@ -141,7 +141,7 @@ return [
             'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
             'host' => $cache['host'],
             'port' => $cache['port'],
-            'password' => $db['pass'],
+            'password' => $cache['pass'],
         ],
 
         /**
@@ -153,7 +153,7 @@ return [
             'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
             'host' => $cache['host'],
             'port' => $cache['port'],
-            'password' => $db['pass'],
+            'password' => $cache['pass'],
             /*
             'className' => 'Cake\Cache\Engine\FileEngine',
             'prefix' => 'myapp_cake_routes_',
