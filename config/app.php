@@ -94,7 +94,7 @@ return [
     'Cache' => [
         'default' => [
 //            'className' => 'Cake\Cache\Engine\FileEngine',
-            'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
+            'className' => 'Cake\Cache\Engine\RedisEngine',    // add using Redis
 /*
             'server' => $cache['host'],
             'port' => $cache['port'],
@@ -113,7 +113,7 @@ return [
          */
         '_cake_core_' => [
 //            'className' => 'Cake\Cache\Engine\FileEngine',
-            'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
+            'className' => 'Cake\Cache\Engine\RedisEngine',    // add using Redis
             /*`
             'server' => $cache['host'],
             'port' => $cache['port'],
@@ -135,7 +135,7 @@ return [
          */
         '_cake_model_' => [
 //            'className' => 'Cake\Cache\Engine\FileEngine',
-            'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
+            'className' => 'Cake\Cache\Engine\RedisEngine',    // add using Redis
             /*
             'server' => $cache['host'],
             'port' => $cache['port'],
