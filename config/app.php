@@ -95,11 +95,14 @@ return [
         'default' => [
 //            'className' => 'Cake\Cache\Engine\FileEngine',
             'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
+/*
             'server' => $cache['host'],
             'port' => $cache['port'],
             'password' => $cache['pass'],
+            */
             'path' => CACHE,
 //            'url' => env('CACHE_DEFAULT_URL', null),
+            'url' => env('REDIS_URL', null),
         ],
 
         /**
@@ -111,14 +114,17 @@ return [
         '_cake_core_' => [
 //            'className' => 'Cake\Cache\Engine\FileEngine',
             'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
+            /*`
             'server' => $cache['host'],
             'port' => $cache['port'],
             'password' => $cache['pass'],
+            */
             'prefix' => 'myapp_cake_core_',
             'path' => CACHE . 'persistent/',
             'serialize' => true,
             'duration' => '+1 years',
-//            'url' => env('CACHE_CAKECORE_URL', null),      
+//            'url' => env('CACHE_CAKECORE_URL', null),
+            'url' => env('REDIS_URL', null),
         ],
 
         /**
@@ -130,14 +136,17 @@ return [
         '_cake_model_' => [
 //            'className' => 'Cake\Cache\Engine\FileEngine',
             'className' => ' Cake\Cache\Engine\RedisEngine',    // add using Redis
+            /*
             'server' => $cache['host'],
             'port' => $cache['port'],
             'password' => $cache['pass'],
+            */
             'prefix' => 'myapp_cake_model_',
             'path' => CACHE . 'models/',
             'serialize' => true,
             'duration' => '+1 years',
 //            'url' => env('CACHE_CAKEMODEL_URL', null),
+            'url' => env('REDIS_URL', null),
         ],
 
         /**
