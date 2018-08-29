@@ -269,7 +269,7 @@ return [
             'persistent' => false,
             // 'host' => 'localhost',
             'host' => $db['host'],
-            'port' => '5432',
+            'port' => $db['port'],
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
