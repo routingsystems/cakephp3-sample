@@ -2,7 +2,6 @@
 
 /* add using Heroku Postgres and Heroku Redis*/
 $db = parse_url(env('DATABASE_URL'));
-CakeLog::warning("Hello, this is a test message! in app.php");
 
 return [
     /**
