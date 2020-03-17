@@ -69,5 +69,7 @@ class PagesController extends AppController
     
     public function test()
     {
+        session_start();
+        echo 'Hello world';
     }
 }
