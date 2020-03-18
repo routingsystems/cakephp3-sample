@@ -121,7 +121,6 @@ return [
             'duration' => '+1 years',
 //            'url' => env('CACHE_CAKECORE_URL', null),
 //            'url' => env('REDIS_URL', null),
-            'fallback' => false
         ],
 
         /**
@@ -142,7 +141,6 @@ return [
             'duration' => '+1 years',
 //            'url' => env('CACHE_CAKEMODEL_URL', null),
 //            'url' => env('REDIS_URL', null),
-            'fallback' => false
         ],
 
         /**
@@ -157,7 +155,6 @@ return [
             'serialize' => true,
             'duration' => '+1 years',
             'url' => env('CACHE_CAKEROUTES_URL', null),
-            'fallback' => false
         ],
     ],
 
